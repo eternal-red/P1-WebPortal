@@ -1,0 +1,151 @@
+import React from 'react';
+import { ArrowLeft, Mail } from 'lucide-react';
+
+interface TermsOfServiceProps {
+  onNavigateHome: () => void;
+}
+
+const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigateHome }) => {
+  return (
+    <div className="min-h-screen bg-background text-text-black">
+      {/* Navigation */}
+      <nav className="bg-surface/95 backdrop-blur-sm border-b border-gray-300 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-xl font-bold text-text-black">PeregrineOne</span>
+            </div>
+            <div className="hidden md:flex items-center space-x-8">
+              <button 
+                onClick={onNavigateHome}
+                className="text-gray-600 hover:text-text-black transition-colors flex items-center gap-2"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back to Home
+              </button>
+              <a 
+                href="https://app.peregrineone.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-accent hover:bg-accent/90 text-text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              >
+                Launch App
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Content */}
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-surface backdrop-blur-sm border border-gray-300 rounded-3xl p-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">Terms of Service</h1>
+            
+            <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">1. Acceptance of Terms</h2>
+                <p className="mb-4">
+                  Welcome to PeregrineOne. By accessing or using our services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to all of these Terms, you may not access or use our services.
+                </p>
+                <p>
+                  We may update these Terms from time to time. Your continued use of PeregrineOne after any changes to the Terms constitutes your acceptance of the revised Terms.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">2. Description of Service</h2>
+                <p>
+                  PeregrineOne is an AI-powered lead discovery and engagement platform designed to help B2B teams identify and contact high-intent leads before competitors do. Our platform enables users to search newly registered businesses, discover relevant decision-makers, conduct personalized outreach using AI agents, and schedule appointments automatically—all with human oversight at key stages.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">3. Account Registration and Security</h2>
+                <p className="mb-4">To access certain features, you must create an account. By registering, you agree to:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Provide accurate, current, and complete information</li>
+                  <li>Maintain and promptly update your account details</li>
+                  <li>Keep your password secure and confidential</li>
+                  <li>Notify us immediately of any unauthorized use</li>
+                  <li>Be fully responsible for all activity under your account</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">4. User Conduct</h2>
+                <p className="mb-4">You agree not to use the Service to:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Violate any applicable laws or regulations</li>
+                  <li>Impersonate any person or organization</li>
+                  <li>Harass, abuse, or harm others</li>
+                  <li>Upload or transmit malware or malicious code</li>
+                  <li>Interfere with or disrupt the Service or infrastructure</li>
+                  <li>Collect or store personal data about others without consent</li>
+                  <li>Post content that is unlawful, offensive, or otherwise inappropriate</li>
+                  <li>Engage in unauthorized commercial activities or spamming</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">5. Intellectual Property Rights</h2>
+                <p className="mb-4">
+                  The Service and its original content, features, and functionality are owned by PeregrineOne Inc. and are protected by international copyright, trademark, trade secret, and other intellectual property laws.
+                </p>
+                <p>
+                  By submitting content to the Service, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, adapt, publish, translate, distribute, and display such content solely for the purpose of operating and improving the Service.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">6. Limitation of Liability</h2>
+                <p className="mb-4">In no event shall PeregrineOne Inc., its directors, employees, partners, agents, suppliers, or affiliates be liable for:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                  <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
+                  <li>Damages resulting from service interruptions or access issues</li>
+                  <li>Damages from unauthorized access to or use of our servers</li>
+                  <li>Any liability arising out of your use or inability to use the Service</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">7. Disclaimer of Warranties</h2>
+                <p>
+                  The Service is provided on an "AS IS" and "AS AVAILABLE" basis, without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">8. Termination</h2>
+                <p>
+                  We may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason, including, without limitation, if you breach these Terms. Upon termination, your right to use the Service will immediately cease.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">9. Governing Law</h2>
+                <p>
+                  These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any legal action or proceeding relating to your access to or use of the Service shall be instituted in federal courts of the United States.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-text-black mb-4">10. Contact Us</h2>
+                <p className="flex items-center gap-2">
+                  If you have any questions about these Terms, please contact us at:
+                  <Mail className="h-4 w-4" />
+                  <a href="mailto:team@peregrineone.ai" className="text-accent hover:text-accent/80 transition-colors">
+                    team@peregrineone.ai
+                  </a>
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TermsOfService;
